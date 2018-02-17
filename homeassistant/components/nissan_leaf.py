@@ -139,8 +139,7 @@ class LeafDataStore:
     def __init__(self, leaf, hass, config):
         self.leaf = leaf
         self.config = config
-        # self.nissan_connect = config[DOMAIN][CONF_NCONNECT]
-        self.nissan_connect = config[DOMAIN][CONF_NCONNECT]  # Disabled until tested and implemented
+        self.nissan_connect = config[DOMAIN][CONF_NCONNECT]
         self.force_miles = config[DOMAIN][CONF_FORCE_MILES]
         self.hass = hass
         self.data = {}

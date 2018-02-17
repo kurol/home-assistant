@@ -22,7 +22,7 @@ def setup_scanner(hass, config, see, discovery_info=None):
 
 		for key, value in hass.data[DATA_LEAF].items():
 			host_name = value.leaf.nickname
-			dev_id = 'nissan_leaf{}'.format(slugify(host_name))
+			dev_id = 'nissan_leaf_{}'.format(slugify(host_name))
 			if value.data[DATA_LOCATION] in [None,False]:
 				_LOGGER.debug("No position found for vehicle %s", key)
 				return False

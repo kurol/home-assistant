@@ -8,7 +8,7 @@ import logging
 from homeassistant.util import slugify
 from homeassistant.helpers.dispatcher import (
 	dispatcher_connect, dispatcher_send)
-from custom_components.nissan_leaf import DATA_LEAF, SIGNAL_UPDATE_LEAF, DATA_LOCATION
+from homeassistant.components.nissan_leaf import DATA_LEAF, SIGNAL_UPDATE_LEAF, DATA_LOCATION
 
 _LOGGER = logging.getLogger(__name__)
 

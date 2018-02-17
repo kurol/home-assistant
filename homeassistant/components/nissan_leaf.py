@@ -82,7 +82,7 @@ CONFIG_SCHEMA = vol.Schema({
 }, extra=vol.ALLOW_EXTRA)
 
 LEAF_COMPONENTS = [
-    'sensor', 'switch', 'binary_sensor'
+    'sensor', 'switch', 'binary_sensor', 'device_tracker'
 ]
 
 SIGNAL_UPDATE_LEAF = 'nissan_leaf_update'
@@ -140,7 +140,7 @@ class LeafDataStore:
         self.leaf = leaf
         self.config = config
         # self.nissan_connect = config[DOMAIN][CONF_NCONNECT]
-        self.nissan_connect = False  # Disabled until tested and implemented
+        self.nissan_connect = config[DOMAIN][CONF_NCONNECT]  # Disabled until tested and implemented
         self.force_miles = config[DOMAIN][CONF_FORCE_MILES]
         self.hass = hass
         self.data = {}
